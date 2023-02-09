@@ -4,7 +4,7 @@ import Heading from '../component/Header'
 import useFetchAxios from '../Hooks/useFetchAxios'
 import Pagination from '../Component/Pagination'
 const Blogs = () => {
-const {data,loading,error}= useFetchAxios("https://63d9e79519fffcd620bd543d.mockapi.io/api/blogs")
+const {data,loading,error}= useFetchAxios("")
   let [blogs , setBlogs] = React.useState([])
 
 
