@@ -4,7 +4,7 @@ import Heading from '../component/Header'
 import useFetchAxios from '../Hooks/useFetchAxios'
 import Pagination from '../Component/Pagination'
 const Blogs = () => {
-const {data,loading,error}= useFetchAxios("https://server-kennel-api-bxaf.onrender.com/dogs")
+const {data,loading,error}= useFetchAxios("https://server-kennel-api-bxaf.onrender.com/blogs")
   let [blogs , setBlogs] = React.useState([])
 
   const [currentPage, setCurrentPage ] = React.useState(1)
@@ -29,9 +29,7 @@ function paginateBackward(){
   React.useEffect(()=>{
     { data && setBlogs(data) }
   },[data])
-      if(loading){
-        return (<p>Loading...</p>)
-      }
+     
 
 return (
     <div className='overflow-hidden'> 
@@ -41,7 +39,7 @@ return (
 <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
    
   <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
-{blogs && <Blog blogs={currentBlog} />}
+ <Blog blogs={currentBlog} />
     
   </div>
 </div>
