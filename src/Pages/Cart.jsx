@@ -3,13 +3,13 @@ import {useCart} from 'react-use-cart'
 import { Link } from 'react-router-dom'
 import Header from '../Component/Header';
 import {useAuthUser} from 'react-auth-kit'
-import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
+/* import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3'; */
 
 
 
 const Cart = () => {
   const auth = useAuthUser()
-  
+/*   
   const {
     isEmpty,
     itemTotal,
@@ -48,7 +48,7 @@ const Cart = () => {
     },
     onClose: () => {},
   };
-
+ */
 
   
  /*  if (isEmpty) return <p>Your cart is empty</p>; */
@@ -166,9 +166,9 @@ const Cart = () => {
         </div>
       </div>
 
-      <FlutterWaveButton
+    {/*   <FlutterWaveButton
       className="inline-block bg-yellow-600 hover:bg-yellow-500 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
-      {...flutterWaveConfig} />
+      {...flutterWaveConfig} /> */}
     </div>
     }
   </div>
