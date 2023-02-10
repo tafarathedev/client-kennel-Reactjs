@@ -11,7 +11,7 @@ const Products = () => {
   const [products ,setProducts] = React.useState([])
   const [currentPage, setCurrentPage ] = React.useState(1)
   const [productPerPage ] = React.useState(12)
-  const {data,loading,error}= useAxiosFetch(`http://localhost:5050/products`)
+  const {data,loading,error}= useAxiosFetch(`https://server-kennel-api-bxaf.onrender.com/products`)
   //pagination  logic
   const IndexOfLastPage = currentPage * productPerPage
   const IndexOfFirstPage = IndexOfLastPage - productPerPage

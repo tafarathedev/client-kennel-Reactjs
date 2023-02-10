@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           authType = {'cookie'}
           authName={'token'}
           cookieDomain={window.location.hostname}
-          cookieSecure={window.location.protocol === "http:"} >
+          cookieSecure={window.location.protocol === "https:"} >
             <BrowserRouter>                              
             <CartProvider>
                <App/>

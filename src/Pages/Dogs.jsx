@@ -8,7 +8,7 @@ import { Circles } from 'react-loader-spinner'
 
 
 const  Dogs = () => {
-  const {data,loading,error}= useAxiosFetch("https://63d9e79519fffcd620bd543d.mockapi.io/api/dogs")
+  const {data,loading,error}= useAxiosFetch("https://server-kennel-api-bxaf.onrender.com/dogs")
   const [ dogs ,setDogs] = React.useState([])
   const [currentPage, setCurrentPage ] = React.useState(1)
   const [dogsPerPage ] = React.useState(12)

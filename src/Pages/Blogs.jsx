@@ -4,9 +4,8 @@ import Heading from '../component/Header'
 import useFetchAxios from '../Hooks/useFetchAxios'
 import Pagination from '../Component/Pagination'
 const Blogs = () => {
-const {data,loading,error}= useFetchAxios("")
+const {data,loading,error}= useFetchAxios("https://server-kennel-api-bxaf.onrender.com/dogs")
   let [blogs , setBlogs] = React.useState([])
-
 
   const [currentPage, setCurrentPage ] = React.useState(1)
   const [blogPerPage ] = React.useState(6)
@@ -42,7 +41,7 @@ return (
 <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
    
   <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
- <Blog blogs={currentBlog} />
+{blogs && <Blog blogs={currentBlog} />}
     
   </div>
 </div>
