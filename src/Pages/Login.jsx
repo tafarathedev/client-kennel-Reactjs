@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSignIn } from 'react-auth-kit'
 import AuthService from '../services/Auth.services'
+import Header from '../Component/Header'
 
 
 const Login = ()=>{
@@ -56,6 +57,12 @@ function handleChange(event){
   }
  
     return (
+      <>
+      <br/>
+      <br/>
+      <br/>
+    
+      <Header title="Login Into your Account" para="Use your email address and password to do it"/>
         <section className="w-5/6 mx-auto">
         <div className="px-6 h-full text-gray-800">
           <div
@@ -193,6 +200,7 @@ function handleChange(event){
           </div>
         </div>
       </section>
+      </>
     )
 }
 

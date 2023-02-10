@@ -28,11 +28,11 @@ const Cart = () => {
     payment_options: 'card,mobilemoney',
     customer: {
       email: 'tafaratakaiza19@gmail.com',
-      phone_number:'0979100310',
+      phone_number:'',
       name:auth?auth().firstName:"",
     },
     customizations: {
-      title:"",
+      title:"Legacy Kennels Dog Breeding",
       description:"",
       logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
     }
