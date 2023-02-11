@@ -1,5 +1,5 @@
 import React from 'react'
-import Heading from '../component/Header'
+import Header from '../component/Header'
 import Question from '../component/Question'
 const FAQs = () => {
 
@@ -17,7 +17,7 @@ const FAQs = () => {
   return (
       <div className="bg-white py-6 sm:py-8 lg:py-12">
    
-        <Heading title="Frequently asked questions" para="This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated."/>
+        <Header title="Frequently asked questions" para="This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated."/>
   <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
     <div className="flex flex-col max-w-screen-sm border-t mx-auto">
      {/*  <!-- questions- start --> */}
