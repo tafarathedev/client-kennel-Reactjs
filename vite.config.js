@@ -11,13 +11,13 @@ export default defineConfig({
       "/@": resolve( __dirname, "./src"),
       "@": fileURLToPath(new URL("src", import.meta.url))
     },
-  }, build:{
+  }/* , build:{
     rollupOptions:{
       plugins:[
         resolve()
       ]
     }
-  }
+  } */
 })
 
 
