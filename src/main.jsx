@@ -9,16 +9,16 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <BrowserRouter>                              
           <AuthProvider 
           authType = {'cookie'}
           authName={'token'}
           cookieDomain={window.location.hostname}
           cookieSecure={window.location.protocol === "https:"} >
-            <BrowserRouter>                              
-            <CartProvider>
-               <App/>
-            </CartProvider>
+              <CartProvider>
+                   <App/>
+              </CartProvider>
+         </AuthProvider>
      </BrowserRouter>
-     </AuthProvider>
   </React.StrictMode>,
 )

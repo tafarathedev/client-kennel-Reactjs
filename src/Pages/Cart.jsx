@@ -3,13 +3,13 @@ import {useCart} from 'react-use-cart'
 import { Link } from 'react-router-dom'
 import Header from '../Component/Header';
 import {useAuthUser} from 'react-auth-kit'
-/* import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3'; */
+ import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3'; 
 
 
 
 const Cart = () => {
   const auth = useAuthUser()
-/*   
+  
   const {
     isEmpty,
     itemTotal,
@@ -43,12 +43,11 @@ const Cart = () => {
     ...config,
     text: 'Checkout!',
     callback: (response) => {
-       console.log(response);
       closePaymentModal() // this will close the modal programmatically
     },
     onClose: () => {},
   };
- */
+ 
 
   
  /*  if (isEmpty) return <p>Your cart is empty</p>; */
@@ -78,8 +77,7 @@ const Cart = () => {
         <>
          {
           items.map(item=>{
-         console.log(item)
-            return(
+                     return(
               <div key={item.id} className="flex flex-wrap border rounded-lg overflow-hidden gap-x-4 sm:gap-y-4 lg:gap-6">
    <Link to="/product_details" className="group w-32 sm:w-40 h-48 sm:h-56 block bg-gray-100 overflow-hidden relative">
    <img src={item.image} loading="lazy" alt="Photo by Thái An" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
@@ -166,9 +164,9 @@ const Cart = () => {
         </div>
       </div>
 
-    {/*   <FlutterWaveButton
+      <FlutterWaveButton
       className="inline-block bg-yellow-600 hover:bg-yellow-500 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
-      {...flutterWaveConfig} /> */}
+      {...flutterWaveConfig} /> 
     </div>
     }
   </div>

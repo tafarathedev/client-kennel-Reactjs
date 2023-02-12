@@ -3,7 +3,7 @@ import Product from '../Component/Product'
 import useAxiosFetch from '../Hooks/useFetchAxios'
 import Pagination from '../Component/Pagination'
 import Header from '../Component/Header'
-
+import { Circles } from 'react-loader-spinner'
 
 
 
@@ -38,7 +38,17 @@ const Products = () => {
  },[data])
 
 
-
+if(loading){
+  return ( <Circles
+  height="80"
+  width="80"
+  color="red"
+  ariaLabel="circles-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+/>)
+}
 
   return (  
     <div className='justify-center align-center bg-white overflow-hidden'>
