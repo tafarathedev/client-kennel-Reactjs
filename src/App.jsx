@@ -8,7 +8,7 @@ import Footer from './Component/Footer'
 import Dogs from './Pages/Dogs'
 import Cart from './Pages/Cart'
 import FAQs from './Pages/FAQs'
- import Blogs from './pages/Blogs' 
+/*  import Blogs from './pages/Blogs'  */
 import Products from './Pages/Products'
 import ProductReview from './Pages/ProductReview'
 import Home from './Pages/Home'
