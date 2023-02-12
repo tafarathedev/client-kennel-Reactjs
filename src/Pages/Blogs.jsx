@@ -1,8 +1,11 @@
 import React from 'react'
-import Heading from '../component/Header'
+import Header from '../Component/Header'
  import Blog from '../Component/Blog'
 import useFetchAxios from '../Hooks/useFetchAxios'
 import Pagination from '../Component/Pagination'
+
+
+
 const Blogs = () => {
 const {data,loading,error}= useFetchAxios("https://server-kennel-api-bxaf.onrender.com/blogs")
   let [blogs , setBlogs] = React.useState([])
@@ -16,14 +19,8 @@ const {data,loading,error}= useFetchAxios("https://server-kennel-api-bxaf.onrend
 
 
   
-  function paginateForward(){
-       
-    setCurrentPage(prevState=>prevState + 1)
-}
-function paginateBackward(){
-     
-    setCurrentPage(prevState=>prevState - 1)
-}
+  function paginateForward(){setCurrentPage(prevState=>prevState + 1)}
+  function paginateBackward(){ setCurrentPage(prevState=>prevState - 1)}
 
 
   React.useEffect(()=>{
@@ -35,7 +32,7 @@ return (
     <div className='overflow-hidden'> 
 
         
-    <Heading title="Blogs" para="Here we provide you with weekly blogs concerning dogs in general. Feel free every week to come through and gain some knowledge about dogs which in return will help make you an excellent and responsible pet owner." />
+    <Header title="Blogs" para="Here we provide you with weekly blogs concerning dogs in general. Feel free every week to come through and gain some knowledge about dogs which in return will help make you an excellent and responsible pet owner." />
 <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
    
   <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">

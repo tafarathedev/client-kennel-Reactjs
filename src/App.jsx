@@ -8,7 +8,7 @@ import Footer from './Component/Footer'
 import Dogs from './Pages/Dogs'
 import Cart from './Pages/Cart'
 import FAQs from './Pages/FAQs'
-/* import Blogs from './pages/Blogs' */
+ import Blogs from './pages/Blogs' 
 import Products from './Pages/Products'
 import ProductReview from './Pages/ProductReview'
 import Home from './Pages/Home'
@@ -30,7 +30,8 @@ function App() {
          <Navbar/>
       </nav>
       <main>
-   {isAuthenticated()?( <Routes>
+   {isAuthenticated()?( 
+   <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="*" element={<PageNotFound/>} />
         <Route path="/products" element={<RequireAuth loginPath={'/login'}><Products/></RequireAuth>}/>
@@ -38,7 +39,7 @@ function App() {
         <Route path="/dogs" element={<RequireAuth loginPath={'/login'}><Dogs/></RequireAuth>}  />
         <Route path="/cart" element={<RequireAuth loginPath={'/login'}><Cart/></RequireAuth>}/>
         <Route path="/frequently_asked_questions" element={<FAQs/>} />
-      {/*   <Route path="/blogs" element={<RequireAuth loginPath={'/login'}><Blogs/></RequireAuth>}/> */}
+       <Route path="/blogs" element={<RequireAuth loginPath={'/login'}><Blogs/></RequireAuth>}/> 
         <Route path="/settings" element={<RequireAuth loginPath={'/login'}><Settings/></RequireAuth>}/>
   </Routes>):(
     <Routes> 
