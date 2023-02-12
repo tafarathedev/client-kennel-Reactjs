@@ -33,7 +33,7 @@ function handleChange(event){
        AuthService.login(user.email.toLocaleLowerCase().toString().trim(), user.password.toString().trim(),user.agree)
        .then((res)=>{
                  if(res){
-                    console.log(res.token)
+                /*     console.log(res.token) */
                     if(signIn({
                         token:res.token,
                         expiresIn:3600,
