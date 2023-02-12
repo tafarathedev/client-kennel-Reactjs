@@ -30,7 +30,7 @@ function App() {
          <Navbar/>
       </nav>
       <main>
-   {isAuthenticated()?( 
+
    <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="*" element={<PageNotFound/>} />
@@ -41,14 +41,11 @@ function App() {
         <Route path="/frequently_asked_questions" element={<FAQs/>} />
       {/*  <Route path="/blogs" element={<RequireAuth loginPath={'/login'}><Blogs/></RequireAuth>}/>  */}
         <Route path="/settings" element={<RequireAuth loginPath={'/login'}><Settings/></RequireAuth>}/>
-  </Routes>):(
-    <Routes> 
-      <Route path="/" element={<Home/>} />
-      <Route path="/register" element={<Register/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="*" element={<PageNotFound/>} />
+         <Route path="/register" element={<Register/>}/>
+         <Route path="/login" element={<Login/>}/>
+        
     </Routes>
-  )}
+  
       </main>
       <footer className=""> 
          <Footer/>
