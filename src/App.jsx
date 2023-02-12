@@ -22,7 +22,7 @@ import PageNotFound from './Pages/PageNotFound'
 
 
 function App() {
-  const isAuthenticated = useIsAuthenticated()
+/*   const isAuthenticated = useIsAuthenticated() */
 
   return (
     <div className="App font-family: ui-sans-serif, system-ui, -apple-system,flex flex-col h-full justify-between">
