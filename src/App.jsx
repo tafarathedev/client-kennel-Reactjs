@@ -39,7 +39,7 @@ function App() {
         <Route path="/dogs" element={<RequireAuth loginPath={'/login'}><Dogs/></RequireAuth>}  />
         <Route path="/cart" element={<RequireAuth loginPath={'/login'}><Cart/></RequireAuth>}/>
         <Route path="/frequently_asked_questions" element={<FAQs/>} />
-       <Route path="/blogs" element={<RequireAuth loginPath={'/login'}><Blogs/></RequireAuth>}/> 
+      {/*  <Route path="/blogs" element={<RequireAuth loginPath={'/login'}><Blogs/></RequireAuth>}/>  */}
         <Route path="/settings" element={<RequireAuth loginPath={'/login'}><Settings/></RequireAuth>}/>
   </Routes>):(
     <Routes> 
