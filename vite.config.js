@@ -9,14 +9,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "/@": resolve( __dirname, "./src"),
-     /*  "@": fileURLToPath(new URL("src", import.meta.url)) */
+      "@": fileURLToPath(new URL("src", import.meta.url)) 
     },
   } , build:{
-   /*  rollupOptions:{
+    rollupOptions:{
       plugins:[
         resolve()
       ]
-    }, */
+    }, 
     optimizeDeps: {
       include: ["@apollo/client/core", "@apollo/client/link/error"],
     },
