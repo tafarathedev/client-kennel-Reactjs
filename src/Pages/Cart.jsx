@@ -29,7 +29,7 @@ const Cart = () => {
     customer: {
       email: 'tafaratakaiza19@gmail.com',
       phone_number:'',
-      name:auth?auth().firstName:"",
+      name:auth?auth().laststName:"",
     },
     customizations: {
       title:"Legacy Kennels Dog Breeding",
@@ -42,10 +42,12 @@ const Cart = () => {
   const flutterWaveConfig = {
     ...config,
     text: 'Checkout!',
-    callback: (response) => {
+    callback: (res) => {
       closePaymentModal() // this will close the modal programmatically
     },
-    onClose: () => {},
+    onClose: () => {
+      
+    },
   };
  
 
