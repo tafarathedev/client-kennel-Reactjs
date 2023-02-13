@@ -87,7 +87,7 @@ const Cart = () => {
 
    <div className="flex flex-col justify-between flex-1 py-4">
      <div>
-       <Link to="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">{item.name}</Link>
+       <Link to="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">{item.title}</Link>
 
        <span className="block text-gray-500">Size: S</span>
        <span className="block text-gray-500">Color: Black</span>
