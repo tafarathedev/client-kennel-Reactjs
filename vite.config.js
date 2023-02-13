@@ -9,13 +9,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "/@": resolve( __dirname, "./src/Pages/"), 
       "@": fileURLToPath(new URL("src", import.meta.url)) 
     },
   } , build:{
     rollupOptions:{
       plugins:[
-        resolve() ,
         commonjs() 
 		
       ]
