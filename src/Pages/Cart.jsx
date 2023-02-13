@@ -45,9 +45,7 @@ const Cart = () => {
     callback: (res) => {
       closePaymentModal() // this will close the modal programmatically
     },
-    onClose: () => {
-      
-    },
+    onClose: () => {},
   };
  
 
@@ -87,7 +85,7 @@ const Cart = () => {
 
    <div className="flex flex-col justify-between flex-1 py-4">
      <div>
-       <Link to="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">{item.title}</Link>
+       <Link to="#" className="inline-block text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100 mb-1">{item.name}</Link>
 
        <span className="block text-gray-500">Size: S</span>
        <span className="block text-gray-500">Color: Black</span>
@@ -104,7 +102,7 @@ const Cart = () => {
        </span>
      </div>
    </div>
-
+ 
    <div className="w-full sm:w-auto flex justify-between border-t sm:border-none p-4 sm:pl-0 lg:p-6 lg:pl-0">
      <div className="flex flex-col items-center gap-2">
        <div className="w-20 h-12 flex border rounded overflow-hidden">

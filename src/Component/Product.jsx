@@ -32,7 +32,7 @@ const Product = ({products}) => {
         </a>
     <div className="px-4 py-3 w-72">
       
-      <p className="text-lg font-bold text-black truncate block capitalize">{product.title}</p>
+      <p className="text-lg font-bold text-black truncate block capitalize">{product.name}</p>
       <div className="flex items-center justify-between">
         <p className="text-lg font-semibold text-black cursor-auhref my-3">K{product.price}</p>
              
