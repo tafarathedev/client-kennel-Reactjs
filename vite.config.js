@@ -6,15 +6,16 @@ import {resolve} from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), require("daisyui")],
+  plugins: [react()],
   resolve: {
     alias: {
-      "/@": resolve( __dirname, "./src/Pages/Cart.jsx"), 
+      "/@": resolve( __dirname, "./src/Pages/"), 
       "@": fileURLToPath(new URL("src", import.meta.url)) 
     },
   } , build:{
     rollupOptions:{
       plugins:[
+        resolve() ,
         commonjs() 
 		
       ]
