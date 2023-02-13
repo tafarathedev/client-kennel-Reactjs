@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from "url";
+import commonjs from '@rollup/plugin-commonjs';
 import {resolve} from 'path'
 
 // https://vitejs.dev/config/
@@ -14,7 +15,9 @@ export default defineConfig({
   } , build:{
     rollupOptions:{
       plugins:[
-        resolve() 
+        resolve() ,
+        commonjs() 
+		
       ]
     }, 
     optimizeDeps: {
