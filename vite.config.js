@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "/@": resolve( __dirname, "./src"), 
+      "/@": resolve( __dirname, "./src/Pages/Cart.jsx"), 
       "@": fileURLToPath(new URL("src", import.meta.url)) 
     },
   } , build:{

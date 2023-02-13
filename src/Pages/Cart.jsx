@@ -3,7 +3,7 @@ import {useCart} from 'react-use-cart'
 import { Link } from 'react-router-dom'
 import Header from '../Component/Header';
 import {useAuthUser} from 'react-auth-kit'
- import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3'; 
+
 
 
 
@@ -20,34 +20,8 @@ const Cart = () => {
   } = useCart();
 
 
-  const config = {
-    public_key: 'FLWPUBK_TEST-b1b508f3889c28fa32723a86765980da-X',
-    tx_ref: Date.now(),
-    amount: cartTotal,
-    currency: 'ZMW',
-    payment_options: 'card,mobilemoney',
-    customer: {
-      email: 'tafaratakaiza19@gmail.com',
-      phone_number:'',
-      name:auth?auth().laststName:"",
-    },
-    customizations: {
-      title:"Legacy Kennels Dog Breeding",
-      description:"",
-      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
-    }
-  };
-
-
-  const flutterWaveConfig = {
-    ...config,
-    text: 'Checkout!',
-    callback: (res) => {
-      closePaymentModal() // this will close the modal programmatically
-    },
-    onClose: () => {},
-  };
  
+
 
   
  /*  if (isEmpty) return <p>Your cart is empty</p>; */
@@ -96,7 +70,7 @@ const Cart = () => {
 
        <span className="flex items-center text-gray-500 text-sm gap-1">
          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
          </svg>
          In stock
        </span>
@@ -164,9 +138,7 @@ const Cart = () => {
         </div>
       </div>
 
-      <FlutterWaveButton
-      className="inline-block bg-yellow-600 hover:bg-yellow-500 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
-      {...flutterWaveConfig} /> 
+   <button  className="inline-block bg-yellow-600 hover:bg-yellow-500 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Checkout</button>
     </div>
     }
   </div>
