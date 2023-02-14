@@ -16,7 +16,7 @@ export default function useFetchAxios(url){
                         'Content-Type': 'application/json;charset=UTF-8',
                         "Access-Control-Allow-Origin": true,
                         "Access-Control-Allow-Credentials": false,
-                         "mode":"cors"
+                         "mode":"no-cors"
                     }})
                     setData(res.data)
                 }catch(err){
