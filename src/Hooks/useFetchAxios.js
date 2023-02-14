@@ -15,7 +15,7 @@ export default function useFetchAxios(url){
                     const res = await axios.get(url , { headers: {
                         'Content-Type': 'application/json;charset=UTF-8',
                         "Access-Control-Allow-Origin": true,
-                        "Access-Control-Allow-Credentials": true,
+                        "Access-Control-Allow-Credentials": false,
                          "mode":"cors"
                     }})
                     setData(res.data)
