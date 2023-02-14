@@ -10,7 +10,12 @@ const signup = (email, password, firstName,lastName, agree) => {
         firstName,
         lastName,
         agree
-    })
+    },
+    {mode:"cors" , headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+      "Access-Control-Allow-Origin": true,
+      "Access-Control-Allow-Credentials": true,
+  }})
     .then((res) => {
       /* if (res.data.token) {
         return res.data
