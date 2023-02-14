@@ -39,6 +39,7 @@ const Products = () => {
 
 
 if(loading){
+  console.log(loading)
     return (
       <div>
         <p>Loading....</p>
@@ -46,6 +47,7 @@ if(loading){
     )
 }
 if(error){
+  console.log(error.message)
   return (
     <div>
       <p>{error.message}</p>
