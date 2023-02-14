@@ -36,22 +36,6 @@ const  Dogs = () => {
   return (  
     <div className='justify-center align-center bg-white overflow-hidden'>
            <Header  title="Dogs on Sale" para="All  Dogs in this store are readilly available."/>
-{loading?(  <div className='justify-center align-center bg-white w-full '>
-   
-         
-            {/* loader */}
-           <Circles
-  height="80"
-  width="80"
-  color="red"
-  ariaLabel="circles-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-/>
-    
-  
-    </div>) :(<> 
            <div className="mt-8 max-w-screen-xl  ">
       <p className="text-sm text-right text-gray-500">
         Page(s) <span> {currentPage} </span> / {null?'fetching....':Math.ceil( dogs.length/currentDogs.length)}
@@ -72,7 +56,7 @@ const  Dogs = () => {
      perPage={dogsPerPage}
      />
    </div>
-     </>)}
+    
     </div>
 
       

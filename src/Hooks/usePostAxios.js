@@ -8,7 +8,7 @@ export default function usePostAxios(url, payload){
     React.useEffect(() => {
       (async () => {
         try {
-          const res = await axios.post(url,payload ,{headers: {
+          const res = await axios.post(url,payload ,{mode:"cors" , headers: {
             'Content-Type': 'application/json;charset=UTF-8',
             "Access-Control-Allow-Origin": true,
             "Access-Control-Allow-Credentials": true,

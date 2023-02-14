@@ -12,7 +12,7 @@ export default function useFetchAxios(url){
         return async function(){
                 try{
                     setLoading(true)
-                    const res = await axios.get(url,{mode:"cors", headers: {
+                    const res = await axios.get(url, {headers: {
                         'Content-Type': 'application/json;charset=UTF-8',
                         "Access-Control-Allow-Origin": true,
                         "Access-Control-Allow-Credentials": true,

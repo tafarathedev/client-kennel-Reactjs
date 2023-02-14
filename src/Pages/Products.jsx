@@ -39,17 +39,19 @@ const Products = () => {
 
 
 if(loading){
-  return ( <Circles
-  height="80"
-  width="80"
-  color="red"
-  ariaLabel="circles-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-/>)
+    return (
+      <div>
+        <p>Loading....</p>
+      </div>
+    )
 }
-
+if(error){
+  return (
+    <div>
+      <p>{error.message}</p>
+    </div>
+  )
+}
   return (  
     <div className='justify-center align-center bg-white overflow-hidden'>
            <Header  title="Pet Supplies" para="All products in this store are only dog related."/>
