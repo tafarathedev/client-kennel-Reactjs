@@ -8,7 +8,7 @@ import Pagination from '../Component/Pagination'
 
 const Blogs = () => {
 const {data,loading,error}= useFetchAxios("https://server-kennel-api-bxaf.onrender.com/blogs")
-  let [blogs , setBlogs] = React.useState([])
+  const [blogs , setBlogs] = React.useState([])
 
   const [currentPage, setCurrentPage ] = React.useState(1)
   const [blogPerPage ] = React.useState(6)
@@ -47,6 +47,7 @@ return (
      currentPage={currentPage}   
      total={blogs.length}
      perPage={blogPerPage}
+     IndexOfLastPage={IndexOfLastPage}
      />
    </div>
   </div>
