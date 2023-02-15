@@ -35,23 +35,23 @@ const Navbar = () => {
     <div className=" flex-1 items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
       <ul className="flex  flex-col p-4 mt-4 border-none  rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-900 bg-transparent md:text-white  md:dark:bg-gray-900 dark:border-none">
         <li>
-          <Link to="/" className="block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="/">Home</Link>
+          <a href="/" className="block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="/">Home</a>
         </li>
         <li>
-          <Link to="/dogs" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Puppy Store</Link>
+          <a href="/dogs" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Puppy Store</a>
         </li>
         <li>
-          <Link to="/products" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pet Supplies</Link>
+          <a href="/products" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pet Supplies</a>
         </li>
         <li>
-          <Link to="/frequently_asked_questions" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FAQs</Link>
+          <a href="/frequently_asked_questions" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FAQs</a>
         </li>
         
         <li>
-          <Link to="/blogs" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blogs </Link>
+          <a href="/blogs" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blogs </a>
         </li>
         <li>
-          <Link to="#" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</Link>
+          <a href="#" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -78,7 +78,7 @@ const Navbar = () => {
           <span className="font-bold text-lg">{totalUniqueItems} items</span>
         <span className="text-info">Subtotal: K{cartTotal}</span>
         <div className="card-actions">
-          <Link to="/cart" className="btn bg-yellow-600 text-white  btn-block">View cart</Link>
+          <a href="/cart" className="btn bg-yellow-600 text-white  btn-block">View cart</a>
         </div>
       </div>
         

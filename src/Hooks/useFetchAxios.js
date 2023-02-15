@@ -12,7 +12,7 @@ export default function useFetchAxios(url){
         return async function(){
                 try{
                     setLoading(true)
-                    const res = await axios.get(url , {  withCredentials: true,    
+                    const res = await axios.get(url , { 
                         crossorigin: true,    
                         mode: 'no-cors',  
                 })

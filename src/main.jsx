@@ -10,15 +10,15 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>                              
+    <CartProvider>
           <AuthProvider 
           authType = {'cookie'}
           authName={'token'}
           cookieDomain={window.location.hostname}
           cookieSecure={window.location.protocol === "https:"} >
-              <CartProvider>
                    <App/>
-              </CartProvider>
          </AuthProvider>
+      </CartProvider>
      </BrowserRouter>
   </React.StrictMode>,
 )
