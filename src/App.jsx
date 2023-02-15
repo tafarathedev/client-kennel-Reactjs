@@ -1,14 +1,13 @@
 import React from 'react'
 import './App.css'
 import { Route, Routes } from "react-router-dom"
-import Hero from './Component/Hero'
 import Navbar from './Component/Navbar'
 import Footer from './Component/Footer'
 //import pages
 import Dogs from './Pages/Dogs'
 import Cart from './Pages/Cart'
 import FAQs from './Pages/FAQs'
- import Blogs from './pages/Blogs'  
+ import Blogs from './Pages/Blogs'  
 import Products from './Pages/Products'
 import ProductReview from './Pages/ProductReview'
 import Home from './Pages/Home'
@@ -39,7 +38,7 @@ function App() {
         <Route path="/dogs" element={<RequireAuth loginPath={'/login'}><Dogs/></RequireAuth>}  />
         <Route path="/cart" element={<RequireAuth loginPath={'/login'}><Cart/></RequireAuth>}/>
         <Route path="/frequently_asked_questions" element={<FAQs/>} />
-       <Route path="/blogs" element={<RequireAuth loginPath={'/login'}><Blogs/></RequireAuth>}/>  
+     <Route path="/blogs" element={<RequireAuth loginPath={"/login"}><Blogs/></RequireAuth>} />
         <Route path="/settings" element={<RequireAuth loginPath={'/login'}><Settings/></RequireAuth>}/>
          <Route path="/register" element={<Register/>}/>
          <Route path="/login" element={<Login/>}/>
