@@ -35,7 +35,7 @@ const Products = () => {
  React.useEffect(()=>{
    { data && setProducts(data)}
    
- },[products])
+ },[data])
 
 
 if(loading){
