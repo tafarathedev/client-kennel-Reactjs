@@ -6,7 +6,8 @@ import Header from '../Component/Header'
 
 
 const Login = ()=>{
-    const navigate = useNavigate()                                                                                          
+    const navigate = useNavigate()         
+    const [loading , setLoading] = React.useState(false)                                                                                 
     const signIn = useSignIn()
     const [user , setUser] = React.useState({
         email:"",
@@ -32,7 +33,9 @@ function handleChange(event){
 
        AuthService.login(user.email.toLocaleLowerCase().toString().trim(), user.password.toString().trim(),user.agree)
        .then((res)=>{
+        setLoading(true)
                  if(res){
+                  setLoading(false)
                 /*     console.log(res.token) */
                     if(signIn({
                         token:res.token,
@@ -42,10 +45,11 @@ function handleChange(event){
              
                    })){
                          setUser(res)
+                         setLoading(false)
                          navigate('/')
                          window.location.reload()
                    }else{
-            
+                       setLaoding(false)
                    }
                  }
        })
@@ -184,7 +188,7 @@ function handleChange(event){
                     type="submit"
                     className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                   >
-                    Login
+                  {loading?"Loading...":"Login"}
                   </button>
                   <p className="text-sm font-semibold mt-2 pt-1 mb-0">
                     Don't have an account?
